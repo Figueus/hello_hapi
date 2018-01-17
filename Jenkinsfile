@@ -16,6 +16,12 @@ pipeline {
                 sh 'npm install'
             }
         }
+        stage('DIRECTORY') {
+            steps {
+                echo 'Directory located at:'
+                sh 'pwd'   
+            }
+        }
         stage('Test') {
             steps {
                 echo 'Testing...'
